@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import NewsCard from "./components/NewsCard";
 import SearchBar from "./components/SearchBar";
 
-const url1 = "https://corsproxytugas.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us";
+const url1 = "https://newsapi.org/v2/top-headlines?country=us";
 
 class Lifecycle extends React.Component {
   state = {
@@ -55,7 +55,7 @@ class Lifecycle extends React.Component {
 
   // Menambahkan fitur live search dengan componentDidUpdate
   componentDidUpdate(prevProp, prevState) {
-    const url2 = `https://corsproxytugas.herokuapp.com/https://newsapi.org/v2/everything?q=${this.state.search}&searchIn=title`;
+    const url2 = `https://newsapi.org/v2/everything?q=${this.state.search}&searchIn=title`;
     const { search } = this.state;
 
     if (prevState.search !== search) {
