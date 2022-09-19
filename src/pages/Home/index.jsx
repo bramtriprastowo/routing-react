@@ -4,7 +4,7 @@ import { Profile } from "./components/Profile";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 
-const Styling = () => {
+const Home = () => {
   return (
     <>
       <Header />
@@ -15,4 +15,4 @@ const Styling = () => {
   );
 };
 
-export default Styling;
+export default Home;
