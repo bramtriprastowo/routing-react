@@ -1,0 +1,9 @@
+.formWidthResp {
+    width: 450px;
+}
+
+@media only screen and (max-width: 500px) {
+    .formWidthResp {
+      width: 80%;
+    }
+}

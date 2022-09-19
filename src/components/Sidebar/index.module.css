@@ -1,0 +1,80 @@
+.menuButton {
+  width: 44px;
+  height: 50px;
+  color: #ffffff;
+  background-color: rgb(33, 37, 41);
+  border: none;
+  position: fixed;
+  top: 12px;
+  z-index: 1030;
+  font-size: 20px;
+  transform: rotate(-90deg);
+}
+
+.menuButton:hover {
+  color: #c6c6c6;
+  border-top: solid 4px #0275d8;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16rem;
+  height: 100vh;
+  z-index: 1031;
+  background-color: rgb(33, 37, 41);
+  opacity: 0.95;
+  transition: 0.5s;
+  transform: translateX(-100%);
+}
+
+.menuActive {
+  transform: translateX(0%);
+}
+
+.menuTitle {
+  color: #ffffff;
+  display: block;
+  margin: 0 auto 7px;
+  width: 80%;
+  padding-bottom: 14px;
+  border-bottom: solid 1px white;
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.menuLink {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  width: 92%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 6%;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+}
+
+.menuLink:hover {
+  background-color: rgb(57, 57, 57);
+  color: #ffffff;
+  border-left: 2px solid #0275d8;
+}
+
+.menuBack {
+  display: block;
+  width: 30px;
+  color: #ffffff;
+  font-size: 38px;
+  margin-left: auto;
+  margin-top: 4px;
+  margin-right: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+.menuBack:hover {
+  cursor: pointer;
+  color: #c6c6c6;
+}
