@@ -57,6 +57,7 @@ export class Contact extends React.Component {
                     variant="dark"
                     type="submit"
                     className="button-submit"
+                    disabled
                   >
                     Submit
                   </Button>

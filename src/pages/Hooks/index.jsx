@@ -15,8 +15,8 @@ const NewsSite = () => {
 
   //UseEffect untuk melakukan fetch data
   useEffect(() => {
-    const url1 = "https://newsapi.org/v2/top-headlines?country=us";
-    const url2 = `https://newsapi.org/v2/everything?q=${search}&searchIn=title`;
+    const url1 = "https://corsproxytugas.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us";
+    const url2 = `https://corsproxytugas.herokuapp.com/https://newsapi.org/v2/everything?q=${search}&searchIn=title`;
 
     const fetchNews = (url) => {
       setIsLoading(true);
