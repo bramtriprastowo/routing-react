@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.css";
 
-const pageTitle = 'formValidation';
+const pageTitle = "formValidation";
 
 const Input = ({ label, name, type, onChangeFunction }) => {
   return (
@@ -173,13 +173,9 @@ class FormValidation extends React.Component {
     );
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.props.handleActivePage(pageTitle);
-  } 
-  
-  componentWillUnmount(){
-    this.props.handleActivePage('');
-  }  
+  }
 }
 
 export default FormValidation;

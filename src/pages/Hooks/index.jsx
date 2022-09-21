@@ -7,7 +7,9 @@ const NewsSite = (props) => {
   const [dataNews, setDataNews] = useState([]);
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState();
-  const pageTitle = 'hooks';
+  const pageTitle = "hooks";
+
+  const { handleActivePage } = props;
 
   //Fungsi untuk menyimpan input dari kolom pencarian
   const handleChange = useCallback((e) => {
@@ -41,13 +43,8 @@ const NewsSite = (props) => {
 
   //UseEffect untuk mengubah tampilan Sidebar ketika aktif
   useEffect(() => {
-    props.handleActivePage(pageTitle);
-
-    return () => {
-      props.handleActivePage('');
-    }
-  }, [props])
-  
+    handleActivePage(pageTitle);
+  }, [handleActivePage]);
 
   return (
     <>

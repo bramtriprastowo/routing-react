@@ -5,16 +5,12 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 
 const Home = (props) => {
-  const pageTitle = 'home';
+  const pageTitle = "home";
+  const { handleActivePage } = props;
 
   useEffect(() => {
-    props.handleActivePage(pageTitle);
-
-    return () => {
-      props.handleActivePage('');
-    }
-  }, [props])
-  
+    handleActivePage(pageTitle);
+  }, [handleActivePage]);
 
   return (
     <>

@@ -4,7 +4,7 @@ import NewsCard from "./components/NewsCard";
 import SearchBar from "./components/SearchBar";
 
 const url1 = "https://newsapi.org/v2/top-headlines?country=us";
-const pageTitle = 'lifecycle';
+const pageTitle = "lifecycle";
 
 class Lifecycle extends React.Component {
   state = {
@@ -25,16 +25,14 @@ class Lifecycle extends React.Component {
 
   //Fungsi untuk menangkap input pada search bar untuk fitur live search
   handleChange = (e) => {
-    this.setState(
-      {
-        search: e.target.value,
-      },
-      () => console.log(this.state.search)
-    );
+    this.setState({
+      search: e.target.value,
+    });
   };
 
   render() {
     const { search, dataNews } = this.state;
+
     return (
       <>
         {/* Navbar */}
@@ -67,10 +65,6 @@ class Lifecycle extends React.Component {
         this.fetchNews(url1);
       }
     }
-  }
-
-  componentWillUnmount() {
-    this.props.handleActivePage('');
   }
 }
 
