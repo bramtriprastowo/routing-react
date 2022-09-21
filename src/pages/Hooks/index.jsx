@@ -3,10 +3,11 @@ import Navbar from "./Components/Navbar";
 import NewsCard from "./Components/NewsCard";
 import SearchBar from "./Components/SearchBar";
 
-const NewsSite = () => {
+const NewsSite = (props) => {
   const [dataNews, setDataNews] = useState([]);
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState();
+  const pageTitle = 'hooks';
 
   //Fungsi untuk menyimpan input dari kolom pencarian
   const handleChange = useCallback((e) => {
@@ -37,6 +38,16 @@ const NewsSite = () => {
       fetchNews(url2);
     }
   }, [search]);
+
+  //UseEffect untuk mengubah tampilan Sidebar ketika aktif
+  useEffect(() => {
+    props.handleActivePage(pageTitle);
+
+    return () => {
+      props.handleActivePage('');
+    }
+  }, [props])
+  
 
   return (
     <>

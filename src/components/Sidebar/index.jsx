@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./index.module.css";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(true);
   const hideSidebar = () => setSidebar(false);
@@ -28,13 +28,25 @@ const Sidebar = () => {
           Contents
         </span>
         <span>
-          <Link className={styles.menuLink} onClick={hideSidebar} to="/home">
+          <Link
+            className={
+              props.activePage === "home"
+                ? styles.menuLink + " " + styles.menuLinkActive
+                : styles.menuLink + " " + styles.menuLinkInactive
+            }
+            onClick={hideSidebar}
+            to="/home"
+          >
             Home
           </Link>
         </span>
         <span>
           <Link
-            className={styles.menuLink}
+            className={
+              props.activePage === "formValidation"
+                ? styles.menuLink + " " + styles.menuLinkActive
+                : styles.menuLink + " " + styles.menuLinkInactive
+            }
             onClick={hideSidebar}
             to="/formvalidation"
           >
@@ -42,13 +54,25 @@ const Sidebar = () => {
           </Link>
         </span>
         <span>
-          <Link className={styles.menuLink} onClick={hideSidebar} to="/hooks">
+          <Link
+            className={
+              props.activePage === "hooks"
+                ? styles.menuLink + " " + styles.menuLinkActive
+                : styles.menuLink + " " + styles.menuLinkInactive
+            }
+            onClick={hideSidebar}
+            to="/hooks"
+          >
             Hooks
           </Link>
         </span>
         <span>
           <Link
-            className={styles.menuLink}
+            className={
+              props.activePage === "lifecycle"
+                ? styles.menuLink + " " + styles.menuLinkActive
+                : styles.menuLink + " " + styles.menuLinkInactive
+            }
             onClick={hideSidebar}
             to="/lifecycle"
           >

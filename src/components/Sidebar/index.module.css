@@ -61,10 +61,18 @@
   font-family: "Poppins", sans-serif;
 }
 
-.menuLink:hover {
+.menuLinkInactive:hover {
   background-color: rgb(57, 57, 57);
   color: #ffffff;
   border-left: 2px solid #0275d8;
+}
+
+.menuLinkActive {
+  background-color: #0275d8;
+}
+
+.menuLinkActive:hover {
+  color: #ffffff;
 }
 
 .menuBack {
