@@ -1,17 +1,17 @@
 import "./App.css";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Router from "./config/router";
 
 function App() {
-  const [activePage, setActivePage] = useState('');
+  const [activePage, setActivePage] = useState("");
 
-  const handleActivePage = (value) => {
+  const handleActivePage = useCallback((value) => {
     setActivePage(value);
-  }
+  }, []);
 
   return (
     <>
-      <Router activePage={activePage} handleActivePage={handleActivePage}/>
+      <Router activePage={activePage} handleActivePage={handleActivePage} />
     </>
   );
 }

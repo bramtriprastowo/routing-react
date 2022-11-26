@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import styled from "styled-components";
+import styles from "./index.module.css";
 
 const StyledNavbarBrand = styled(Navbar.Brand)`
   color: #ffffff;
@@ -14,6 +15,8 @@ const StyledNavLink = styled(Nav.Link)`
 
 export class Header extends React.Component {
   render() {
+    let { navActive } = this.props;
+
     return (
       <Navbar
         bg="dark"
@@ -29,13 +32,34 @@ export class Header extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <StyledNavLink href="#profile" className="fs-5 me-4 pb-0">
+              <StyledNavLink
+                href="#profile"
+                className={
+                  navActive === "profile"
+                    ? `fs-5 me-4 pb-0 ${styles.navItem} ${styles.navItemActive}`
+                    : `fs-5 me-4 pb-0 ${styles.navItem}`
+                }
+              >
                 Profile
               </StyledNavLink>
-              <StyledNavLink href="#projects" className="fs-5 me-4 pb-0">
+              <StyledNavLink
+                href="#projects"
+                className={
+                  navActive === "projects"
+                    ? `fs-5 me-4 pb-0 ${styles.navItem} ${styles.navItemActive}`
+                    : `fs-5 me-4 pb-0 ${styles.navItem}`
+                }
+              >
                 Projects
               </StyledNavLink>
-              <StyledNavLink href="#contact" className="fs-5 pb-0">
+              <StyledNavLink
+                href="#contact"
+                className={
+                  navActive === "contact"
+                    ? `fs-5 me-4 pb-0 ${styles.navItem} ${styles.navItemActive}`
+                    : `fs-5 me-4 pb-0 ${styles.navItem}`
+                }
+              >
                 Contact
               </StyledNavLink>
             </Nav>

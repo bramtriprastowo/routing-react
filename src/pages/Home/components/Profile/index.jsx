@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
-import Avatar from "./images/image-avatar.jpg";
+import Avatar from "../images/pasfoto.jpg";
 
 const StyledSection = styled.section`
   font-family: "Poppins", sans-serif;

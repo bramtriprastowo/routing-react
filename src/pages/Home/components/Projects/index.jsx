@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import styled from "styled-components";
-import styles from "./Projects.module.css"
-import KosDamaiImage from "./images/kos damai.png";
-import OnlineNotesImage from "./images/onlinenotes.png";
-import TokoshopImage from "./images/tokoshop.png";
+import styles from "./index.module.css"
+import KosDamaiImage from "../images/kos damai.png";
+import OnlineNotesImage from "../images/onlinenotes.png";
+import TokoshopImage from "../images/tokoshop.png";
 
 const StyledSection = styled.section`
   font-family: "Poppins", sans-serif;
